@@ -3,6 +3,9 @@
 > - ✋ this is a work in progress 🚧, but you can already play with it 🥰
 > - 🤖 caution: it's not for production, it's for learning purpose
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/bots-garden/ollama-js-langchain)
+
+
 This project used the **[Ollama project and its Docker image](https://ollama.ai/blog/ollama-is-now-available-as-an-official-docker-image)**.
 
 The main goal is to experiment with **[Ollama-js](https://github.com/ollama/ollama-js)** and **[LangChain JS](https://js.langchain.com/docs/get_started/introduction)**
