@@ -1,30 +1,16 @@
 
 image: gitpod/workspace-full:latest
 
-# List the start up tasks. Learn more: https://www.gitpod.io/docs/configure/workspaces/tasks
 tasks:
-  - name: LangChain dependencies an so on
+  - name: Ollama-js and LangChain-js dependencies
     init: yarn
-  - name: Start Ollama and the LLM
+  - name: Ollama and tinydolphin
     init: |
       docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
-      #docker exec -it ollama ollama run tinydolphin
       docker exec ollama ollama run tinydolphin
-      gp sync-done llm-loaded
-  - name: Start playing
-    init: |
-      gp sync-await llm-loaded
       cd 01-chat
       echo "👋 hello, try this: node about-star-wars.js"
 
-# List the ports to expose. Learn more: https://www.gitpod.io/docs/configure/workspaces/ports
-ports:
-  - name: Frontend
-    description: Port 3000 for the frontend
-    port: 3000
-    onOpen: open-preview
-
-# Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
 vscode:
   extensions:
     - aaron-bond.better-comments
