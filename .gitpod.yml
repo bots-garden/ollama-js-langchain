@@ -5,11 +5,10 @@ image: gitpod/workspace-full:latest
 tasks:
   - name: LangChain dependencies an so on
     init: yarn
-  - name: Start Ollama
-    init: docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
-  - name: Start a model
-    command: docker exec -it ollama ollama run orca-mini
-    #command: docker exec -it ollama ollama run llama2
+  - name: Start Ollama and the LLM
+    init: |
+      docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+      docker exec -it ollama ollama run orca-mini
 
 # List the ports to expose. Learn more: https://www.gitpod.io/docs/configure/workspaces/ports
 ports:
