@@ -1,6 +1,6 @@
 # Use the Ollama Chat API with models
 
-> run the demo:
+> run the demos:
 ```bash
 node no-stream.mjs
 node stream.mjs
