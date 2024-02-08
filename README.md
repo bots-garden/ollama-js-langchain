@@ -1,6 +1,8 @@
-# langchain-sandbox
+# Ollama, Ollama-js and LangChain JS
 
-This project use the **[Ollama project and its Docker image](https://ollama.ai/blog/ollama-is-now-available-as-an-official-docker-image)**.
+This project used the **[Ollama project and its Docker image](https://ollama.ai/blog/ollama-is-now-available-as-an-official-docker-image)**.
+
+The main goal is to experiment with **[Ollama-js](https://github.com/ollama/ollama-js)** and **[LangChain JS](https://js.langchain.com/docs/get_started/introduction)**
 
 ## Start the project
 
@@ -11,18 +13,14 @@ The model is loaded at the start of the Gitpod project.
 - It starts the Docker Ollama container
 - Ollama download the LLM and then starts it
 
-> The model is: **[orca-mini](https://ollama.ai/library/orca-mini)**
+> The model is: **[tinydolphin](https://ollama.ai/library/tinydolphin)**
 
 Once the model started, you can check if everything is ok with this command (in another terminal):
 
 ```bash
 curl -X POST http://localhost:11434/api/generate -d '{
-"model": "orca-mini",
+"model": "tinydolphin",
 "prompt":"Why is the sky blue?"
 }'
 ```
 
-Wait from some seconds and you should get:
-```json
-
-```

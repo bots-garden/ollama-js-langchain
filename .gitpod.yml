@@ -8,7 +8,7 @@ tasks:
   - name: Start Ollama and the LLM
     init: |
       docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
-      docker exec -it ollama ollama run orca-mini
+      docker exec -it ollama ollama run tinydolphin
 
 # List the ports to expose. Learn more: https://www.gitpod.io/docs/configure/workspaces/ports
 ports:
