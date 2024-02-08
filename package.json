@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@langchain/community": "^0.0.26",
+    "@langchain/core": "^0.1.25",
+    "@langchain/google-genai": "^0.0.10",
+    "@mozilla/readability": "^0.5.0",
+    "cheerio": "^1.0.0-rc.12",
+    "chromadb": "^1.8.1",
+    "hnswlib-node": "^2.1.0",
+    "jsdom": "^24.0.0",
+    "langchain": "^0.1.16",
+    "ollama": "^0.4.6"
+  }
+}

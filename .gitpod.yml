@@ -3,8 +3,13 @@ image: gitpod/workspace-full:latest
 
 # List the start up tasks. Learn more: https://www.gitpod.io/docs/configure/workspaces/tasks
 tasks:
-  - name: Start LLM
-    command: docker run -ti -p 8080:8080 localai/localai:v2.7.0-ffmpeg all-minilm-l6-v2
+  - name: LangChain dependencies an so on
+    command: yarn
+  - name: Start Ollama
+    command: docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+  - name: Start a model
+    command: docker exec -it ollama ollama run orca-mini
+    #command: docker exec -it ollama ollama run llama2
 
 # List the ports to expose. Learn more: https://www.gitpod.io/docs/configure/workspaces/ports
 ports:
