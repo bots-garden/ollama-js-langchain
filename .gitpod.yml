@@ -4,9 +4,9 @@ image: gitpod/workspace-full:latest
 # List the start up tasks. Learn more: https://www.gitpod.io/docs/configure/workspaces/tasks
 tasks:
   - name: LangChain dependencies an so on
-    command: yarn
+    init: yarn
   - name: Start Ollama
-    command: docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+    init: docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
   - name: Start a model
     command: docker exec -it ollama ollama run orca-mini
     #command: docker exec -it ollama ollama run llama2
