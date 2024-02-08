@@ -1,4 +1,7 @@
-# Ollama, Ollama-js and LangChain JS
+# 🦙 Ollama, 🟨 Ollama-js and 🦜🔗 LangChain JS with 🍊 Gitpod 🎉
+
+> - ✋ this is a work in progress 🚧, but you can already play with it 🥰
+> - 🤖 caution: it's not for production, it's for learning purpose
 
 This project used the **[Ollama project and its Docker image](https://ollama.ai/blog/ollama-is-now-available-as-an-official-docker-image)**.
 
@@ -15,7 +18,7 @@ The model is loaded at the start of the Gitpod project.
 
 > The model is: **[tinydolphin](https://ollama.ai/library/tinydolphin)**
 
-Once the model started, you can check if everything is ok with this command (in another terminal):
+Once the model started, you can check if everything is ok with this command (**in another terminal**):
 
 ```bash
 curl -X POST http://localhost:11434/api/generate -d '{

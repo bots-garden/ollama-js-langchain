@@ -9,6 +9,10 @@ tasks:
     init: |
       docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
       docker exec -it ollama ollama run tinydolphin
+  - name: Start playing
+    init: |
+      cd 01-chat
+      echo "👋 hello, try this: node about-star-wars.js"
 
 # List the ports to expose. Learn more: https://www.gitpod.io/docs/configure/workspaces/ports
 ports:
@@ -20,7 +24,6 @@ ports:
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
 vscode:
   extensions:
-    - pomdtr.excalidraw-editor
     - aaron-bond.better-comments
     - PKief.material-icon-theme
     - golang.go
