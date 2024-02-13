@@ -9,7 +9,7 @@ tasks:
       docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
       docker exec ollama ollama run tinydolphin
       cd 01-chat
-      echo "👋 hello, try this: node about-star-wars.js"
+      echo "👋 hello, try this: node about-star-wars.mjs"
 
 vscode:
   extensions:
